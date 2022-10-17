@@ -1,6 +1,8 @@
 import { TRANSACTION_ID_PLACEHOLDER } from './api';
 import { SupportedChains } from './supported-chains';
 
+console.warn('explorer-lookup');
+
 export interface IBlockchainObject {
   code: SupportedChains;
   name: string;
@@ -68,6 +70,26 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
     transactionTemplates: {
       full: `https://sepolia.etherscan.io/tx/${TRANSACTION_ID_PLACEHOLDER}`,
       raw: `https://sepolia.etherscan.io/getRawTx?tx=${TRANSACTION_ID_PLACEHOLDER}`
+    }
+  },
+  [SupportedChains.Csprmain]: {
+    code: SupportedChains.Csprmain,
+    name: 'Casper',
+    // prefixes: ['0x'],
+    signatureValue: 'casperMainnet',
+    transactionTemplates: {
+      full: `https://cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`,
+      raw: `https://cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`
+    }
+  },
+  [SupportedChains.Csprtest]: {
+    code: SupportedChains.Csprtest,
+    name: 'Casper Testnet',
+    // prefixes: ['0x'],
+    signatureValue: 'casperTestnet',
+    transactionTemplates: {
+      full: `https://testnet.cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`,
+      raw: `https://testnet.cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`
     }
   },
   [SupportedChains.Mocknet]: {

@@ -5,6 +5,8 @@ export enum SupportedChains {
   Ethrinkeby = 'ethrinkeby',
   Ethgoerli = 'ethgoerli',
   Ethsepolia = 'ethsepolia',
+  Csprmain = 'csprmain',
+  Csprtest = 'csprtest',
   Mocknet = 'mocknet',
   Regtest = 'regtest',
   Testnet = 'testnet'
