@@ -1,8 +1,6 @@
 import { TRANSACTION_ID_PLACEHOLDER } from './api';
 import { SupportedChains } from './supported-chains';
 
-console.warn('explorer-lookup');
-
 export interface IBlockchainObject {
   code: SupportedChains;
   name: string;
@@ -75,7 +73,6 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
   [SupportedChains.Csprmain]: {
     code: SupportedChains.Csprmain,
     name: 'Casper',
-    // prefixes: ['0x'],
     signatureValue: 'casperMainnet',
     transactionTemplates: {
       full: `https://cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`,
@@ -85,7 +82,6 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
   [SupportedChains.Csprtest]: {
     code: SupportedChains.Csprtest,
     name: 'Casper Testnet',
-    // prefixes: ['0x'],
     signatureValue: 'casperTestnet',
     transactionTemplates: {
       full: `https://testnet.cspr.live/deploy/${TRANSACTION_ID_PLACEHOLDER}`,
