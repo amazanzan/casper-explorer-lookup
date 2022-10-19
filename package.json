@@ -21,7 +21,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^7.0.0",
     "jest": "^26.6.3",
     "semantic-release": "^19.0.5",
     "sinon": "^11.0.0",
@@ -38,8 +37,7 @@
     "test:coverage": "jest --maxWorkers=4 --silent --noStackTrace --coverage",
     "test:coverage:report": "codecov",
     "semantic-release": "semantic-release",
-    "clean:build": "rimraf lib",
-    "prepare": "husky install"
+    "clean:build": "rimraf lib"
   },
   "repository": {
     "type": "git",
